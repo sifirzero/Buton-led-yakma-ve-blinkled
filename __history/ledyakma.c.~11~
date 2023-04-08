@@ -1,0 +1,31 @@
+#include<12f683.h>
+#fuses INTRC_IO,nomclr
+#use delay (clock=4m)
+
+int i=0;
+
+void main()
+{
+
+while(true)
+{
+
+if(input(pin_a1))
+{
+output_high(pin_a0);
+}
+else
+{
+output_low(pin_a0);
+}
+
+for(i=0; i>10;i++)
+{
+output_high(pin_a2);
+delay_us(1000);
+output_low(pin_a2);
+delay_us(50);
+}
+
+}
+}

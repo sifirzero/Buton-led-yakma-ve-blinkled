@@ -1,0 +1,45 @@
+
+ROM used:   80/2048 (4%)
+            80/2048 (4%) including unused fragments
+
+            0.1 Average locations per line
+            7.3 Average locations per statement
+
+RAM used:   5/128 (4%) at main() level
+            6/128 (5%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   31    11 100  ledyakma.c
+  577     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\12f683.h
+----- -----
+  608    11 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20  25    1             @delay_ms1
+0     56  70    1    172  2.6  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              11
+    Comments                112
+    Volume (V)              176
+    Difficulty (D)          2.4
+    Effort to implement (E) 418
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    73
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF    76  1968  
+
+
+

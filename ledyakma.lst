@@ -1,0 +1,139 @@
+CCS PCM C Compiler, Version 5.061, 43599               25-Þub-23 22:09
+
+               Filename:   C:\Users\serka\Desktop\ledyak\ledyakma.lst
+
+               ROM used:   80 words (4%)
+                           Largest free fragment is 1968
+               RAM used:   5 (4%) at main() level
+                           6 (5%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   018
+0003:  NOP
+.................... #include<12f683.h> 
+.................... //////////// Standard Header file for the PIC12F683 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC12F683 
+....................  
+.................... #list 
+....................  
+.................... #fuses INTRC_IO,nomclr 
+.................... #use delay (clock=4m) 
+0004:  MOVLW  26
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   017
+0009:  MOVLW  01
+000A:  MOVWF  21
+000B:  CLRF   20
+000C:  DECFSZ 20,F
+000D:  GOTO   00C
+000E:  DECFSZ 21,F
+000F:  GOTO   00B
+0010:  MOVLW  4A
+0011:  MOVWF  20
+0012:  DECFSZ 20,F
+0013:  GOTO   012
+0014:  GOTO   015
+0015:  DECFSZ 00,F
+0016:  GOTO   009
+0017:  RETURN
+....................  
+....................  
+....................  
+.................... void main() 
+0018:  MOVF   03,W
+0019:  ANDLW  1F
+001A:  MOVWF  03
+001B:  MOVLW  61
+001C:  BSF    03.5
+001D:  MOVWF  0F
+001E:  CLRF   10
+001F:  MOVF   0F,W
+0020:  BCF    03.5
+0021:  BCF    1F.6
+0022:  BSF    03.5
+0023:  BCF    1F.0
+0024:  BCF    1F.1
+0025:  BCF    1F.2
+0026:  BCF    1F.3
+0027:  MOVLW  07
+0028:  BCF    03.5
+0029:  MOVWF  19
+.................... { 
+....................  
+.................... while(true) 
+.................... { 
+....................  
+.................... if(input(pin_a1)) 
+002A:  BSF    03.5
+002B:  BSF    05.1
+002C:  BCF    03.5
+002D:  BTFSS  05.1
+002E:  GOTO   034
+.................... { 
+.................... output_high(pin_a0); 
+002F:  BSF    03.5
+0030:  BCF    05.0
+0031:  BCF    03.5
+0032:  BSF    05.0
+.................... } 
+0033:  GOTO   038
+.................... else 
+.................... { 
+.................... output_low(pin_a0); 
+0034:  BSF    03.5
+0035:  BCF    05.0
+0036:  BCF    03.5
+0037:  BCF    05.0
+.................... } 
+....................  
+....................  
+.................... output_high(pin_a2); 
+0038:  BSF    03.5
+0039:  BCF    05.2
+003A:  BCF    03.5
+003B:  BSF    05.2
+.................... delay_ms(500); 
+003C:  MOVLW  02
+003D:  MOVWF  25
+003E:  MOVLW  FA
+003F:  MOVWF  26
+0040:  CALL   004
+0041:  DECFSZ 25,F
+0042:  GOTO   03E
+.................... output_low(pin_a2); 
+0043:  BSF    03.5
+0044:  BCF    05.2
+0045:  BCF    03.5
+0046:  BCF    05.2
+.................... delay_ms(500); 
+0047:  MOVLW  02
+0048:  MOVWF  25
+0049:  MOVLW  FA
+004A:  MOVWF  26
+004B:  CALL   004
+004C:  DECFSZ 25,F
+004D:  GOTO   049
+004E:  GOTO   02A
+....................  
+....................  
+.................... } 
+.................... } 
+004F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FC4   INTRC_IO NOWDT PUT NOMCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN

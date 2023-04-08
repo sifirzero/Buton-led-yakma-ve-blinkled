@@ -1,0 +1,51 @@
+[PROJECT]
+Target=ledyakma.hex
+Processor_Text=PIC12F683
+CCSVersion=5.061
+Compiler=PCM
+[Target Data]
+FileList=ledyakma.c
+[ledyakma.c]
+Type=4
+[mru-list]
+1=ledyakma.c
+
+[defines]
+buildcount=4
+
+[Opened Files]
+1=ledyakma.c
+t1=1
+2=..\..\..\..\Program Files (x86)\PICC\Devices\12f683.h
+t2=25
+Count=1
+
+[ProjectLog]
+Days=4
+D1=25-02-2023
+D1_L=6
+D1_L1=[65412]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=10
+D1_D=0
+D1_L2=[66902]Project Closed.
+D1_L3=[79654]Project Opened.
+D1_L4=[79665]Started Editing.
+D1_L5=[80053]Stopped Editing.
+D1_L6=[80217]Project Closed.
+D2=26-02-2023
+D2_L=2
+D2_L1=[59543]Project Opened.
+D2_L2=[59613]Project Closed.
+D3=19-03-2023
+D3_L=2
+D3_L1=[58848]Project Opened.
+D3_L2=[58855]Project Closed.
+D4=23-03-2023
+D4_L=2
+D4_L1=[56898]Project Opened.
+D4_L2=[56940]Project Closed.
+[Units]
+Count=1
+1=ledyakma (main)

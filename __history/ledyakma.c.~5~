@@ -1,0 +1,22 @@
+#include<12f683.h>
+#fuses INTRC_IO,nomclr
+#use delay (clock=4m)
+
+
+int1 i;
+
+void main()
+{
+
+while(true)
+{
+
+i=input(pin_a1);
+
+output_bit(pin_a0,i);
+
+
+
+
+}
+}
